@@ -14,7 +14,7 @@ define(ModuleName, ['base', 'jquery', 'swiper','arttemplate', 'layer'], function
 			return;
 		}
 		//请求公告详情数据
-		_this.fetch('/mjson/index/announcement/detail', {announcement_id: parseInt(id)}, function (res) {
+		_this.fetch('/require/mjson/index/announcement/detail', {announcement_id: parseInt(id)}, function (res) {
 			if (res.code == 0) {
 				$('.noticeDetaill-info').html(T('notice-detail', res.data));
 				setTimeout(function(){
@@ -24,7 +24,7 @@ define(ModuleName, ['base', 'jquery', 'swiper','arttemplate', 'layer'], function
 		})
 
 		//加载轮播数据
-		_this.fetch('/mjson/index', {}, function (res) {
+		_this.fetch('/require/mjson/index', {}, function (res) {
 			var bannerData = res.data.banner;
 			$('#swiper_wrapper').append(T('index-banner', {banners: bannerData}));
 			var swiper = new Swiper('.swiper-container', {

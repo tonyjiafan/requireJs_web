@@ -8,12 +8,12 @@ define(ModuleName, ['base', 'jquery', 'arttemplate', 'layer'], function (Page, $
 			});
 		var layerLoading = layer.msg('加载中...', {icon: 16,shade: 0.6});
 		var _this = this;
-		_this.fetch('/mjson/personal/info', {},function(res){
+		_this.fetch('/require/mjson/personal/info', {},function(res){
 			if (res.code == 0) {
 				$('.user_info').html(T('person-info', res.data));
 			} else {}
 		});
-		_this.fetch('/mjson/personal/dynamic', {},function(res){
+		_this.fetch('/require/mjson/personal/dynamic', {},function(res){
 			if (res.code == 0) {
 				$('.trends-content').html(T('person-summary', {data: res}));
 				setTimeout(function(){

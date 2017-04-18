@@ -16,7 +16,7 @@ define(ModuleName, ['base', 'jquery', 'laypage', 'arttemplate', 'layer'], functi
           data.name = '';
         function getList(page) {
     			data.offset = (page-1) * data.limit;
-    			_this.fetch('/mjson/personal/message', data, function (res) {
+    			_this.fetch('/require/mjson/personal/message', data, function (res) {
     				if (res.code == 0) {
     					var amount = res.data.amount;
     					var listData = res.data;
@@ -41,7 +41,7 @@ define(ModuleName, ['base', 'jquery', 'laypage', 'arttemplate', 'layer'], functi
     			});
     		}
 
-      _this.fetch('/mjson/personal/info', {},function(res){
+      _this.fetch('/require/mjson/personal/info', {},function(res){
   			$('.user_info').html(T('person-info', res.data));
   		});
 

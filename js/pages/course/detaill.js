@@ -20,7 +20,7 @@ define(ModuleName, ['base', 'jquery', 'arttemplate', 'layer'], function (Page, $
 
 		//报名
 		function sign(state, callback) {
-			_this.fetch('/mjson/course/sign', {sign: state, course_id: id}, function (res) {
+			_this.fetch('/require/mjson/course/sign', {sign: state, course_id: id}, function (res) {
 				if (res.code == 0) {
 					if(state == false){
 						layer.tips('已取消报名', '#enrollBtn', {time: 2000,tips: [1, '#4A5B65']});
@@ -35,7 +35,7 @@ define(ModuleName, ['base', 'jquery', 'arttemplate', 'layer'], function (Page, $
 
 		//收藏
 		function collect(state, callback) {
-			_this.fetch('/mjson/course/collection', {collection: state, course_id: id}, function (res) {
+			_this.fetch('/require/mjson/course/collection', {collection: state, course_id: id}, function (res) {
 				if (res.code == 0) {
 					if(state == false){
 						layer.tips('已取消收藏', '#collectBtn', {time: 2000,tips: [2, '#4A5B65']});
@@ -85,7 +85,7 @@ define(ModuleName, ['base', 'jquery', 'arttemplate', 'layer'], function (Page, $
 			});
 		});
 
-		_this.fetch('/mjson/course/detail', {course_id: id}, function (res) {
+		_this.fetch('/require/mjson/course/detail', {course_id: id}, function (res) {
 			detail = res.data;
 			is_overdue = res.data.is_overdue;
 			$('.page_content').html(T('course-detail', detail));
@@ -110,7 +110,7 @@ define(ModuleName, ['base', 'jquery', 'arttemplate', 'layer'], function (Page, $
 			})
 		});
 
-		_this.fetch('/mjson/personal/info', {},function(res){
+		_this.fetch('/require/mjson/personal/info', {},function(res){
 			res.data.course_id = id;
 			info = res.data;
 		});

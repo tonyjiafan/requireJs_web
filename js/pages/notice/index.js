@@ -16,7 +16,7 @@ define(ModuleName, ['base', 'jquery', 'swiper', 'laypage', 'arttemplate', 'layer
 		//请求全部公告数据
 		function getList(page) {
 			data.offset = (page-1) * data.limit;
-			_this.fetch('/mjson/index/announcement', data, function (res) {
+			_this.fetch('/require/mjson/index/announcement', data, function (res) {
 				if (res.code == 0) {
 					var amount = res.data.amount;
 					var announcementData = res.data.announcement;
@@ -61,7 +61,7 @@ define(ModuleName, ['base', 'jquery', 'swiper', 'laypage', 'arttemplate', 'layer
 		getList(1);
 
 		//加载轮播数据
-		_this.fetch('/mjson/index', {}, function (res) {
+		_this.fetch('/require/mjson/index', {}, function (res) {
 			var bannerData = res.data.banner;
 			$('#swiper_wrapper').append(T('index-banner', {banners: bannerData}));
 			var swiper = new Swiper('.swiper-container', {

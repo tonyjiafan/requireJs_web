@@ -43,7 +43,7 @@ define(ModuleName, ['base', 'jquery', 'laypage', 'arttemplate', 'layer'], functi
 				rander(JSON.parse(list));
 			} else {
 				//线上数据
-				_this.fetch('/mjson/course/filter', {}, function (res) {
+				_this.fetch('/require/mjson/course/filter', {}, function (res) {
 					if (res.code == 0) {
 						localStorage.setItem('course_cat', JSON.stringify(res.data));
 						rander(res.data);
@@ -54,7 +54,7 @@ define(ModuleName, ['base', 'jquery', 'laypage', 'arttemplate', 'layer'], functi
 
 		function getCourse(page) {
 			filter.offset = (page - 1) * filter.limit;
-			_this.fetch('/mjson/course/list', filter, function (res) {
+			_this.fetch('/require/mjson/course/list', filter, function (res) {
 				console.log(res)
 				if (res.code == 0) {
 					var pages = Math.ceil(res.data.amount/filter.limit);

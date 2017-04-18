@@ -21,7 +21,7 @@ define(ModuleName, ['base', 'jquery', 'laypage', 'arttemplate', 'layer'], functi
 		//请求Table数据
 		function getList(page) {
 			data.offset = (page-1) * data.limit;
-			_this.fetch('/mjson/report/personal', data, function (res) {
+			_this.fetch('/require/mjson/report/personal', data, function (res) {
 				if (res.code == 0) {
           data.amount = res.data.amount;
 					var pages = Math.ceil(res.data.amount / data.limit); //得到总页数

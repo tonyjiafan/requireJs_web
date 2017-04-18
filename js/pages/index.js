@@ -20,7 +20,7 @@ define(ModuleName, ['base', 'jquery', 'swiper', 'arttemplate', 'layer'], functio
 		})
 
 		//加载数据
-		_this.fetch('/mjson/index', {}, function (res) {
+		_this.fetch('/require/mjson/index', {}, function (res) {
 			if(res.code == 0){
 				var bannerData = res.data.banner,
 						announcementData = res.data.announcement;
