@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "msg": "operation successful",
+  "id": 0,
+  "data": {
+    "system": true,
+    "new_message": 1
+  }
+}

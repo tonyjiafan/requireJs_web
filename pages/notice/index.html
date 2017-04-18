@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html module="notice/index">
+<head>
+    <meta charset="UTF-8">
+    <title>华谊 - 学习平台</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<div class="main">
+    <div class="swiper-box">
+        <div class="header">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand logo" href="/index.html">
+                            <img src="../../images/logo.png">
+                            <h3>学习平台</h3>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="../index.html">首页</a></li>
+                            <li><a href="../course/index.html">课程中心</a></li>
+                            <li><a href="javascript:void(0)" id="to_bbs">学习社区</a></li>
+                            <li><a href="../personal/index.html">个人中心</a></li>
+                            <li><a href="../report/index.html">报表中心</a></li>
+                            <li class="visible-xs"><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+                            <li class="visible-xs"><a href="../personalremind.html">我的提醒</a></li>
+                            <li class="visible-xs"><a href="javascript:void(0);">退出登录</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="hidden-xs hidden-xs-login"></li>
+                           <li  class="no_login login-btn"><a href="javascript:void(0)">登录</a></li>
+                            <!-- <li  class="no_login register-btn"><a href="javascript:void(0)">注册</a></li> -->
+                            <li class="dropdown hidden-xs logined">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <div class="txBox"><img src="../../images/swiper01.jpg"></div>
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../personal/index.html">个人中心</a></li>
+                                    <li><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="login_out"><a href="javascript:void(0);">退出登录</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="swiper_wrapper">
+                <script type="text/html" id="index-banner">
+                    {{each banners as banner}}
+                    <a href="{{if banner.url}} {{banner.url}}{{else}}detaill.html?id={{banner.id}}{{/if}}"
+                       class="swiper-slide" style="background-image:url(data:image/jpg;base64,{{banner.image}})">
+                        <div class="swiper-slide-content">
+                            <div class="swiper-slide-info item1">
+                                <!--<img src="">-->
+                                <h2>{{banner.title}}</h2>
+                            </div>
+                        </div>
+                    </a>
+                    {{/each}}
+                </script>
+            </div>
+            <!-- Add Arrows -->
+        </div>
+        <div class="swiper-button-box">
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+    </div>
+    <div class="containers">
+        <div class="page_content">
+            <div class="notice-box">
+                <div class="notice-title">
+                    <h3><img src="../../images/icon02.png">公司公告</h3>
+                    <a href="../index.html" class="more">返回首页<i class="iconfont icon-erjiyemianjiantou01"></i></a>
+                </div>
+                <ul class="notice-list list-block" id="all_text_list_warp">
+
+                </ul>
+                <script type="text/html" id="notice_list">
+                  {{if list.length > 0}}
+                    {{each list as item}}
+                    <li>
+                        <a href="detaill.html?id={{item.id}}">
+                          <p>
+                              {{if item.is_top}}
+                              <i class="major"></i>
+                              {{/if}}
+                              <b>{{item.text}}</b>{{item.title}}
+                          </p>
+                          <span>2017-02-02</span>
+                        </a>
+                    </li>
+                    {{/each}}
+                    {{else}}
+                    <li style="text-align:center;background:#fff;width:100%;padding:150px 0px;">没有数据</li>
+                  {{/if}}
+                </script>
+                <div id="biuuu_text_number" style="text-align: center;"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_cont">
+            <p>Copyright 2013-2016 上海华谊(集团)公司</p>
+        </div>
+    </div>
+</div>
+<script src="../../js/lib/laypage/laypage.js"></script>
+<script data-main="../../js/app.js" src="../../js/lib/require.js"></script>
+</body>
+</html>

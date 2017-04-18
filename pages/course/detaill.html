@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html module="course/detaill">
+<head>
+    <meta charset="UTF-8">
+    <title>华谊 - 学习平台</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="/index.html">
+                        <img src="../../images/logo.png">
+                        <h3>学习平台</h3>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="../index.html">首页</a></li>
+                        <li class="active"><a href="../course/index.html">课程中心</a></li>
+                        <li><a href="javascript:void(0)" id="to_bbs">学习社区</a></li>
+                        <li><a href="../personal/index.html">个人中心</a></li>
+                        <li><a href="../report/index.html">报表中心</a></li>
+                        <li class="visible-xs"><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+                        <li class="visible-xs"><a href="../personalremind.html">我的提醒</a></li>
+                        <li class="visible-xs"><a href="javascript:void(0);">退出登录</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-xs hidden-xs-login"></li>
+                        <li class="no_login login-btn"><a href="javascript:void(0)">登录</a></li>
+                        <!-- <li class="no_login register-btn"><a href="javascript:void(0)">注册</a></li> -->
+                        <li class="dropdown hidden-xs logined">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                <div class="txBox"><img src="../../images/swiper01.jpg"></div>
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../personal/index.html">个人中心</a></li>
+                                <li><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="login_out"><a href="javascript:void(0);">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="containers">
+        <div class="page_content">
+
+            <script type="text/html" id="course-detail">
+                <div class="courseDetaill_top">
+                    <div class="imgBox" id="img_icon">
+                        <img src="{{if image}}data:image/jpg;base64,{{image}}{{else}}../../images/lzimg02.jpg{{/if}}">
+                    </div>
+                    <div class="info_content">
+                        <div class="title">
+                            <h3 id="title_name">{{name}}</h3>
+                            <!-- <ul>
+                                <li>高级</li>
+                                <li>管理</li>
+                                <li>集团</li>
+                                <li>可选</li>
+                            </ul> -->
+                        </div>
+                        <div class="author" id="author">
+                            <span>讲师：{{author}}</span>
+                        </div>
+                        <h5>课程描述:</h5>
+                        <p id="description_text">{{description}}</p>
+                        <div class="state">
+                            <span><img src="../../images/icon01.png">{{active_time}}</span>
+                            <span><img src="../../images/arrange_icon.png">{{duration}}小时</span>
+                            <span><img src="../../images/icon01.png">21333人</span>
+                            <span><img src="../../images/kcIcon.png">{{structure_name}}</span>
+                        </div>
+                        <div class="btnBox" id="btn_box">
+                          {{if !is_compulsory}}
+                            {{if is_overdue}}
+                            <a>课程已过期</a>
+                              {{else}}
+                                {{if is_sign && is_compulsory}}
+                                <a href="javascript:void(0);" class="enrollBtn" id='enrollBtn'>已报名</a>
+                                {{/if}}
+                                {{if is_sign && !is_compulsory}}
+                                <a href="javascript:void(0);" state="cancel" class="enrollBtn" id='enrollBtn'>取消报名</a>
+                                {{/if}}
+                                {{if !is_sign && !is_overdue}}
+                                <a href="javascript:void(0);" state="sign" class="enrollBtn" id='enrollBtn'>立即报名</a>
+                                {{/if}}
+                              {{/if}}
+                          {{/if}}
+
+                            <a class="main_location_url studyBtn"
+                               {{if !is_sign && is_compulsory}}style="display:none" {{/if}}>
+                            开始学习</a>
+
+                            {{if is_collection}}
+                            <a href="javascript:void(0);" class="collectBtn" id='collectBtn' state=false><img
+                                    src="../../images/collect_icon.png"><span>已收藏</span></a>
+                            {{else}}
+                            <a href="javascript:void(0);" class="collectBtn" id='collectBtn' state=true><img
+                                    src="../../images/collect_icon.png"><span>点击收藏</span></a>
+                            {{/if}}
+                        </div>
+
+                    </div>
+                </div>
+                <!--  -->
+                <div class="courseDetaill_info">
+                    <div class="title"><i><img src="../../images/kcIcon.png"></i>课程简介</div>
+                    <div class="text" id="text_infor">
+                        <p>{{outline}}</p>
+                    </div>
+                    <div class="moreBtn-box">
+                        <a href="javascript:void(0);" class="moreBtn">收起</a>
+                    </div>
+                </div>
+                <!--<div class="courseDetaill_info">-->
+                <!--<div class="title"><i><img src="../../images/kcIcon.png"></i>课程章节</div>-->
+                <!--<p></p>-->
+                <!--<div class="moreBtn-box">-->
+                <!--<a href="javascript:void(0);" class="moreBtn">收起</a>-->
+                <!--</div>-->
+                <!--</div>-->
+            </script>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_cont">
+            <p>Copyright 2013-2016 上海华谊(集团)公司</p>
+        </div>
+    </div>
+</div>
+<script data-main="../../js/app.js" src="../../js/lib/require.js"></script>
+</body>
+</html>

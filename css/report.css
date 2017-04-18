@@ -1,0 +1,171 @@
+/*body背景色*/
+/*默认字体颜色*/
+/*默认连接颜色*/
+/*默认hover , active 颜色*/
+/*页面最大宽度*/
+/*页面最小宽度*/
+/*border默认颜色*/
+/*有背景连接或者有色按钮文字颜色*/
+/*关键字颜色*/
+/*关键字背景*/
+/*默认字体大小*/
+/*标题文字*/
+/*浅色文字*/
+/*提醒文字颜色*/
+/*导航*/
+/*页脚背景色*/
+/*公告置顶圆点颜色*/
+/*table trbg*/
+/*单排背景*/
+/*双排背景*/
+/*盒子样式*/
+/*阴影效果*/
+/*按钮內阴影效果*/
+/*课程页面*/
+/*课程分类菜单*/
+/*搜索*/
+/*课程报名按钮*/
+/*课程学习按钮*/
+/*课程收藏按钮*/
+/***********侧边栏公告************/
+/*开关按钮 背景色*/
+.report-page {
+  padding-top: 90px;
+}
+.report-meun {
+  height: 40px;
+  margin: 20px 0;
+}
+.report-meun li {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  text-align: center;
+}
+.report-meun li a {
+  display: block;
+  padding: 0 20px;
+  min-width: 200px;
+  background: #fff;
+  height: 40px;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  margin-left: -1px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #545454;
+}
+.report-meun li a:hover,
+.report-meun li.active a,
+.report-meun li a:active {
+  background: #5490f7;
+  border: 1px solid #ebebeb;
+  color: #fff;
+}
+.screenBox {
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 14px;
+  position: relative;
+  line-height: 25px;
+  color: #545454;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+}
+.screenBox span {
+  background: #e6efff;
+  padding: 0 10px;
+  height: 25px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+.screenBox label {
+  cursor: pointer;
+  margin-right: 15px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.screenBox label div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.screenBox .hd input {
+  position: absolute;
+  left: -9999em;
+}
+.screenBox .icon-checked {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  display: block;
+  background: url(../images/icon-checked.png) no-repeat center center;
+  background-size: 16px;
+}
+.screenBox .hd input:checked + .icon-checked {
+  background: url(../images/icon-checked2.png) no-repeat center center;
+  background-size: 16px;
+}
+.table-tab {
+  height: 40px;
+  overflow: hidden;
+}
+.table-tab ul {
+  overflow: hidden;
+}
+.table-tab li {
+  float: left;
+  line-height: 40px;
+  text-align: center;
+}
+.table-tab li a {
+  display: block;
+  height: 40px;
+  font-size: 16px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-bottom: 0;
+  min-width: 120px;
+  color: #545454;
+  box-sizing: border-box;
+  margin-right: -1px;
+}
+.table-tab li a:hover,
+.table-tab li a:active,
+.table-tab li.acitve a {
+  background: #5490f7;
+  color: #fff;
+}
+.table-content {
+  color: #545454;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  background: #fff;
+}
+.table-content .table {
+  margin-bottom: 0;
+}
+.table-content .table > tbody > tr > td,
+.table-content .table > tbody > tr > th,
+.table-content .table > tfoot > tr > td,
+.table-content .table > tfoot > tr > th,
+.table-content .table > thead > tr > td,
+.table-content .table > thead > tr > th {
+  padding: 12px 6px;
+  line-height: 1.42857143;
+  vertical-align: middle;
+  border-top: 0;
+  border-bottom: 1px solid #ebebeb;
+  text-align: center;
+}
+.table-content .table-striped > tbody > tr {
+  background: #f9f9f9;
+}
+.table-content .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #fff;
+}

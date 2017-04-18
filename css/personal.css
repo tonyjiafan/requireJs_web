@@ -1,0 +1,380 @@
+/*body背景色*/
+/*默认字体颜色*/
+/*默认连接颜色*/
+/*默认hover , active 颜色*/
+/*页面最大宽度*/
+/*页面最小宽度*/
+/*border默认颜色*/
+/*有背景连接或者有色按钮文字颜色*/
+/*关键字颜色*/
+/*关键字背景*/
+/*默认字体大小*/
+/*标题文字*/
+/*浅色文字*/
+/*提醒文字颜色*/
+/*导航*/
+/*页脚背景色*/
+/*公告置顶圆点颜色*/
+/*table trbg*/
+/*单排背景*/
+/*双排背景*/
+/*盒子样式*/
+/*阴影效果*/
+/*按钮內阴影效果*/
+/*课程页面*/
+/*课程分类菜单*/
+/*搜索*/
+/*课程报名按钮*/
+/*课程学习按钮*/
+/*课程收藏按钮*/
+/***********侧边栏公告************/
+/*开关按钮 背景色*/
+.bgRed {
+  background: #ff9f9f;
+}
+.bgBule {
+  background: #77a9ff;
+}
+.bgGreen {
+  background: #88da9c;
+}
+.bgPurple {
+  background: #9b97dd;
+}
+.bgCyan {
+  background: #85cdbc;
+}
+.personal_top h3 {
+  font-size: 20px;
+  color: #545454;
+  text-align: left;
+  font-weight: 600;
+  padding: 15px 0;
+}
+.user_infoBox {
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+  padding: 20px;
+  overflow: hidden;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.user_infoBox .user_portrait {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  float: left;
+  overflow: hidden;
+}
+.user_infoBox .user_portrait img {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+.user_info {
+  padding-left: 100px;
+  line-height: 30px;
+}
+.user_info .row > div {
+  padding-left: 80px;
+  position: relative;
+}
+.user_info .row > div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.personal_content {
+  padding: 30px 0;
+}
+.personal_menu {
+  width: 200px;
+  border: 1px solid #ebebeb;
+  overflow: hidden;
+  float: left;
+  background: #fff;
+  box-sizing: border-box;
+}
+.personal_menu li {
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #ebebeb;
+}
+.personal_menu li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #545454;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.personal_menu li a i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.personal_menu li a:hover,
+.personal_menu li.active a {
+  background: #5490f7;
+  color: #fff;
+}
+.personal_menu li a:active {
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+}
+.substance {
+  box-sizing: border-box;
+  padding-left: 250px;
+}
+.trends-content {
+  padding: 20px;
+  min-height: 360px;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+}
+.trends-content h3 {
+  font-size: 20px;
+  color: #545454;
+  font-weight: 600;
+}
+.trends-content ul {
+  overflow: hidden;
+  padding-top: 10px;
+}
+.trends-content ul li {
+  width: 33.3333%;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.trends-content ul li a {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+.trends-content ul li a span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.trends-content li a:hover,
+.trends-content li a:active {
+  -moz-box-shadow: 2px 2px 5px #ebebeb;
+  -webkit-box-shadow: 2px 2px 5px #ebebeb;
+  box-shadow: 2px 2px 5px #ebebeb;
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+}
+/*我的课程*/
+.substance-title {
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.substance-title .left-tab {
+  width: 60%;
+  overflow: hidden;
+  height: 28px;
+  float: left;
+}
+.substance-title .left-tab li {
+  float: left;
+  height: 28px;
+  margin-right: 10px;
+}
+.substance-title .left-tab li a {
+  display: block;
+  padding: 0 5px;
+  height: 28px;
+  color: #545454;
+  line-height: 28px;
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
+}
+.substance-title .left-tab li a:hover,
+.substance-title .left-tab li.active a,
+.substance-title .left-tab li a:active {
+  color: #77a9ff;
+  border-bottom: 2px solid #77a9ff;
+}
+.substance-title .right-search {
+  float: right;
+  width: 240px;
+  height: 28px;
+  border: 2px solid #77a9ff;
+  border-radius: 32px;
+  padding: 0 0 0 30px;
+  box-sizing: border-box;
+  background: transparent url(../images/search2.png) no-repeat 7px center;
+  background-size: 20px;
+}
+.substance-title .right-search .searchInput {
+  width: 160px;
+  float: left;
+  border: 0;
+  height: 24px;
+  color: #545454;
+  padding: 0 5px;
+  background: transparent;
+}
+.substance-title .right-search .searchBtn {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  width: 40px;
+  float: left;
+  text-align: center;
+}
+.substance-list > ul > li {
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+  padding: 30px 20px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #999;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.substance-list .course-img {
+  width: 201px;
+  height: 173px;
+  overflow: hidden;
+  float: left;
+}
+.substance-list .course-img img {
+  width: 201px;
+  height: 173px;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  transform: scale(1);
+}
+.substance-list li:hover .course-img img {
+  position: relative;
+  transform: scale(1.06);
+}
+.substance-list .course-info {
+  padding-left: 230px;
+}
+.substance-list .course-info h3 {
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 10px;
+  color: #545454;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+.substance-list .course-info .state {
+  overflow: hidden;
+}
+.substance-list .course-info .state li {
+  width: 35%;
+  float: left;
+  padding: 5px 0;
+}
+.substance-list .course-info .state li img {
+  width: 22px;
+  margin-right: 5px;
+}
+.substance-list .course-info .prompt-text {
+  height: 35px;
+  line-height: 35px;
+  color: #ff9f9f;
+}
+.substance-list .course-info .btnBox {
+  height: 40px;
+  line-height: 40px;
+}
+.substance-list .course-info .btnBox .studyBtn {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  border-radius: 2px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #88da9c;
+  border: 1px solid #88da9c;
+}
+.substance-list .course-info .btnBox .studyBtn:hover {
+  background: #6dba80;
+  border: 1px solid #6dba80;
+}
+.substance-list .course-info .btnBox .studyBtn:active {
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+}
+/*我的证书*/
+.certificated-list ul {
+  /*overflow: hidden;*/
+  margin: 0 -15px;
+}
+.certificated-list ul li {
+  width: 50%;
+  float: left;
+  padding: 0px 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.certificated-cont {
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.certificated-cont .certificated-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.certificated-cont .certificated-img img {
+  width: 100%;
+  height: 220px;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  transform: scale(1);
+}
+.certificated-cont:hover .certificated-img img {
+  position: relative;
+  transform: scale(1.06);
+}
+.certificated-cont h3 {
+  font-size: 18px;
+  padding: 10px 0;
+  font-weight: 600;
+  color: #545454;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+.certificated-cont .state {
+  color: #999;
+}
+.certificated-cont .state img {
+  width: 30px;
+  margin-right: 5px;
+}

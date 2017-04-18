@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html module="report/partake">
+<head>
+	<meta charset="UTF-8">
+	<title>华谊 - 学习平台</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../../css/report.css">
+</head>
+<body>
+<div class="main">
+  <div class="header">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="/index.html">
+                <img src="../../images/logo.png">
+                <h3>学习平台</h3>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class=""><a href="../index.html">首页</a></li>
+              <li><a href="../course/index.html">课程中心</a></li>
+              <li><a href="javascript:void(0)" id="to_bbs">学习社区</a></li>
+              <li><a href="../personal/index.html">个人中心</a></li>
+              <li class="active"><a href="../report/index.html">报表中心</a></li>
+              <li class="visible-xs"><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+              <li class="visible-xs"><a href="../personalremind.html">我的提醒</a></li>
+              <li class="visible-xs"><a href="javascript:void(0);">退出登录</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="hidden-xs hidden-xs-login"></li>
+             <li  class="no_login login-btn"><a href="javascript:void(0)">登录</a></li>
+              <!-- <li  class="no_login register-btn"><a href="javascript:void(0)">注册</a></li> -->
+              <li class="dropdown hidden-xs logined">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <div class="txBox"><img src="../../images/swiper01.jpg"></div>
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../personal/index.html">个人中心</a></li>
+                  <li><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="login_out"><a href="javascript:void(0);">退出登录</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </div>
+  <div class="containers">
+      <div class="second-top">
+          <div class="second-top-content">
+              <div class="keyList">
+                  <span>关键字：</span>
+                  <ul class="key">
+                      <li><a href="">培训</a></li>
+                      <li><a href="">科级干部</a></li>
+                      <li><a href="">培训</a></li>
+                      <li><a href="">科级干部</a></li>
+                      <li><a href="">培训</a></li>
+                  </ul>
+              </div>
+              <div class="searchBox">
+                  <form>
+                        <input type="text" class="form-control searchInput" id="search_input3" placeholder="请输入关键信息">
+                        <button type="button" class="searchBtn">搜索</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <div class="page_content report-page">
+          <div class="report-meun">
+              <ul>
+                  <li><a href="index.html">个人学习情况查询</a></li>
+                  <li><a href="cumulative.html">时间累积情况查询</a></li>
+                  <li class="active"><a href="partake.html">课程参与情况统计</a></li>
+              </ul>
+          </div>
+          <div class="screenBox">
+              <span>勾选需要字段</span>
+              <label>
+	              人员编号
+	              <div class="hd">
+	                  <input type="checkbox" name="checkbox1" number="btn_1" class="chang-btn button_1">
+	                  <i class="icon-checked"></i>
+	              </div>
+              </label>
+              <label>
+                人员姓名
+                <div class="hd">
+                    <input type="checkbox" name="checkbox1" number="btn_2" class="chang-btn button_2">
+                    <i class="icon-checked"></i>
+                </div>
+              </label>
+          </div>
+          <div class="table-content">
+              <table id="table_list_warp_3" class="table table-striped">
+
+              </table>
+							<script id="table_list_3" type="text/html">
+									<tr>
+											<th class="hide_elment hide-elment-1">人员编号</th>
+											<th class="hide_elment hide-elment-2">人员姓名</th>
+											<th>单位</th>
+											<th>部门</th>
+											<th>岗位</th>
+											<th>岗位体系</th>
+											<th>学习必修课数量</th>
+											<th>已完成数量</th>
+											<th>必修课总学时</th>
+											<th>必修课已完成学时</th>
+											<th>学习选修课数量</th>
+											<th>已完成选修课数量</th>
+											<th>选修课总学时</th>
+											<th>选修课已完成学时</th>
+											<th>总课程学分</th>
+											<th>已完成课程学分</th>
+									</tr>
+								{{if list.length > 0}}
+									{{each list as item}}
+                   <tr>
+                      <td class="hide_elment hide-elment-1">{{item.employee_number}}</td>
+                      <td class="hide_elment hide-elment-2">{{item.employee_name}}</td>
+                      <td>{{item.company_name}}</td>
+                      <td>{{item.department_name}}</td>
+                      <td>{{item.job_name}}</td>
+                      <td>{{item.job_structure}}</td>
+                      <td>{{item.compulsory_num}}</td>
+                      <td>{{item.compulsory_done_num}}</td>
+                      <td>{{item.compulsory_duration}}</td>
+                      <td>{{item.compulsory_done_duration}}</td>
+                      <td>{{item.elective_num}}</td>
+                      <td>{{item.elective_done_num}}</td>
+                      <td>{{item.elective_duration}}</td>
+                      <td>{{item.elective_done_duration}}</td>
+                      <td>{{item.score}}</td>
+                      <td>{{item.done_score}}</td>
+                  </tr>
+									{{/each}}
+									{{else}}
+									<li style="text-align:center;background:#fff;width:100%;padding:150px 0px;">没有数据</li>
+								{{/if}}
+							</script>
+              <div style="text-align: center;padding: 10px 0 5px;" id="pagination_box_number_3"> </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer">
+      <div class="footer_cont">
+           <p>Copyright 2013-2016 上海华谊(集团)公司</p>
+      </div>
+  </div>
+</div>
+<script data-main="../../js/app.js" src="../../js/lib/require.js"></script>
+</body>
+</html>

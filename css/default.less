@@ -1,0 +1,161 @@
+@defaultBg: #f6f6f6; /*body背景色*/
+@text_default: #545454;  /*默认字体颜色*/
+@linkdefault:#77a9ff; /*默认连接颜色*/
+@hoverDefault:#5490f7; /*默认hover , active 颜色*/
+@maxWidth:1000px;	/*页面最大宽度*/
+@minWidth:1000px;	/*页面最小宽度*/
+@borderColor:#ebebeb; /*border默认颜色*/
+@linkText:#fff; /*有背景连接或者有色按钮文字颜色*/
+@keyColor:#77a9ff; /*关键字颜色*/
+@keyBg:#e6efff; /*关键字背景*/
+@fontSize:14px; /*默认字体大小*/
+@titleColor:#545454;/*标题文字*/
+@subTextColor:#999;/*浅色文字*/
+@promptText:#ff9f9f;/*提醒文字颜色*/
+
+/*导航*/
+@headerBg:#4f4f4f;
+@headerLink:#fff;
+
+
+
+/*页脚背景色*/
+@footerBg:#fff;
+@footTextColor:@text_default;
+
+/*公告置顶圆点颜色*/
+@majorBg:#f00;
+
+
+/*table trbg*/
+@trBg:#f9f9f9;/*单排背景*/
+@oddTrBg:#fff;/*双排背景*/
+
+
+
+
+/*盒子样式*/
+.boxDefault(box,@bg:#fff,@bd:@borderColor,@s:4px){
+    background-color:@bg;
+    -webkit-border-radius:@s;
+    -moz-border-radius:@s;
+    border-radius: @s;
+    border:1px solid @bd;
+}
+
+
+/*阴影效果*/
+.box-shadow(@style:2px 2px 5px, @c:@borderColor) {
+  -moz-box-shadow: @style @c;
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+
+
+/*按钮內阴影效果*/
+.insetbtn-shadow(@style:0px 1px 3px 0px , @c:rgba(0, 0, 0, 0.5)){
+  -moz-box-shadow: inset @style @c;
+  -webkit-box-shadow: @style @c;
+  box-shadow: inset @style @c;
+}
+
+
+
+/*课程页面*/
+@secondBg:#fff;
+@secondBorder:@borderColor;
+
+/*课程分类菜单*/
+@courseNavBorder:@borderColor;
+@courseNavBg:#fff;
+
+
+
+
+/*搜索*/
+@searchTextColor:#fff;
+@inputBg:#fff;
+@inputBgColor:@linkdefault;
+@inputLinkColor:@hoverDefault;
+
+
+.searchBtn(btn,@d:@linkdefault,@hc:@hoverDefault){
+	background:@d;
+	&:hover{
+		background:@hc
+	}
+	&:active{
+		.insetbtn-shadow
+	}
+	&:focus{
+	    outline: inherit ;
+	    outline: initial ;
+	    outline: unset ;
+	    outline-offset: -2px;
+	}
+}
+
+
+/*课程报名按钮*/
+.coursebtn(enrollBtn,@d:#ff9f9f,@hc:#ff6969){
+    background: @d;
+    border: 1px solid @d;
+    &:hover{
+    	background: @hc;
+    	border: 1px solid @hc;
+    }
+    &:active{
+    	.insetbtn-shadow
+    }
+}
+
+/*课程学习按钮*/
+.coursebtn(studyBtn,@d:#88da9c,@hc:#6dba80){
+    background: @d;
+    border: 1px solid @d;
+    &:hover{
+    	background: @hc;
+    	border: 1px solid @hc;
+    }
+    &:active{
+    	.insetbtn-shadow
+    }
+}
+
+/*课程收藏按钮*/
+.coursebtn(collectBtn,@d:@linkdefault,@hc:@linkdefault){
+    color:@d;
+    border: 1px solid @d;
+    &:hover{
+    	border: 1px solid @hc;
+    	 color:@hc;
+    }
+    &:active{
+    	.insetbtn-shadow
+    }
+}
+
+
+
+/***********侧边栏公告************/
+@sidebarBg:rgba(255, 255, 255, 0.95);
+
+/*开关按钮 背景色*/
+@sidebarBtnBg:#d2e2ff;
+
+
+.moreBtn(btn,@d:@linkdefault,@hc:@hoverDefault,@t:@linkText){
+    background: @d;
+    border: 1px solid @d;
+    color:@t;
+    &:hover{
+    	background: @hc;
+    }
+    &:active{
+    	.insetbtn-shadow
+    }
+}
+
+
+
+

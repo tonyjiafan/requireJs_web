@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "msg": "operation successful",
+  "id": 0,
+  "data": {
+    "done_num": 30,
+    "not_done_num": 30,
+    "compulsory_not_done_num": 23,
+    "score": 30,
+    "all_num": 60
+  }
+}

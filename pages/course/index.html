@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html module="course/index">
+<head>
+    <meta charset="UTF-8">
+    <title>华谊 - 学习平台</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="../index.html">
+                        <img src="../../images/logo.png">
+                        <h3>学习平台</h3>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="../index.html">首页</a></li>
+                        <li class="active"><a href="../course/index.html">课程中心</a></li>
+                        <li><a href="javascript:void(0)" id="to_bbs">学习社区</a></li>
+                        <li><a href="../personal/index.html">个人中心</a></li>
+                        <li><a href="../report/index.html">报表中心</a></li>
+                        <li class="visible-xs"><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+                        <li class="visible-xs"><a href="../personalremind.html">我的提醒</a></li>
+                        <li class="visible-xs"><a href="javascript:void(0);">退出登录</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-xs hidden-xs-login"></li>
+                       <li  class="no_login login-btn"><a href="javascript:void(0)">登录</a></li>
+                        <!-- <li  class="no_login register-btn"><a href="javascript:void(0)">注册</a></li> -->
+                        <li class="dropdown hidden-xs logined">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                <div class="txBox"><img src="../../images/swiper01.jpg"></div>
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../personal/index.html">个人中心</a></li>
+                                <li><a href="javascript:void(0);" class="system_login">系统管理</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="login_out"><a href="javascript:void(0);">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="containers">
+        <div class="second-top">
+            <div class="second-top-content">
+                <div class="keyList">
+                    <span>关键字：</span>
+                    <ul class="key">
+                        <li type="name" value="培训YE" class="filter"><a href="javascript:void(0)">培训YE</a></li>
+                        <li type="name" value="科级干部" class="filter"><a href="javascript:void(0)">科级干部</a></li>
+                        <li type="name" value="集团董事" class="filter"><a href="javascript:void(0)">集团董事</a></li>
+                        <li type="name" value="直属领导" class="filter"><a href="javascript:void(0)">直属领导</a></li>
+                    </ul>
+                </div>
+                <div class="searchBox">
+                    <form id="course-search">
+                        <input type="text" class="form-control searchInput" placeholder="请输入关键信息">
+                        <button type="submit" class="searchBtn" id="search_btn">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="page_content course_page">
+            <div class="course_nav_box">
+                <div class="course-nav-row clearfix">
+                    <span>课件类型</span>
+                    <div class="bd">
+                        <ul id="clearfix_bd_list_1">
+                            <li class="filter active" value="all" type="course_type"><a
+                                    href="javascript:void(0);">全部</a></li>
+                            <li type="course_type" value="elective" class="filter"><a href="javascript:void(0);">选修</a>
+                            </li>
+                            <li type="course_type" value="compulsory" class="filter"><a
+                                    href="javascript:void(0);">必修</a></li>
+                            <!-- <li><a href="javascript:void(0);" type="">可选</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-nav-row clearfix">
+                    <span>单位类型</span>
+                    <div class="bd">
+                        <ul>
+                            <li class="filter active" type="unit_type" value="all"><a href="javascript:void(0);">全部</a></li>
+                            <li class="filter" type="unit_type" value="group"><a href="javascript:void(0);">集团</a></li>
+                            <li class="filter" type="unit_type" value="unit"><a href="javascript:void(0);">本单位</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-nav-row clearfix">
+                    <span>课程分类</span>
+                    <div class="bd">
+                        <ul id="clearfix_bd_list_2">
+                            <li class="filter active" type="structure_id" value="all">
+                                <a href="javascript:void(0);">全部</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="course-nav-row course-subNav clearfix">
+                    <span>类型子项</span>
+                    <div class="bd">
+                        <ul>
+                            <li class="active"><a href="">全部</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                            <li><a href="javascript:void(0);">12312</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="course-nav-row clearfix">
+                    <span>课程级别</span>
+                    <div class="bd">
+                        <ul id="clearfix_bd_list_3">
+                            <li class="filter active" type="level" value="all"><a href="javascript:void(0);">全部</a></li>
+                            <li class="filter" type="level" value="high"><a href="javascript:void(0);">高阶</a></li>
+                            <li class="filter" type="level" value="medium"><a href="javascript:void(0);">中阶</a></li>
+                            <li class="filter" type="level" value="low"><a href="javascript:void(0);">初阶</a></li>
+                            <!-- <li class="disabled"><a href="javascript:void(0);" type="medium">中级</a></li>
+                            <li class="disabled"><a href="javascript:void(0);" type="low">初级</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="courseList">
+                <ul id="all_text_list_warp_2">
+
+                </ul>
+                <script type="text/html" id="course-list">
+                  {{if list.length>0}}
+                    {{each list as item}}
+                    <li>
+                        <a href="detaill.html?id={{item.id}}">
+                            <div class="imgBox">
+                                <img src="{{if item.image}}data:image/jpg;base64,{{item.image}}{{else}}../../images/swiper01.jpg{{/if}}">
+                            </div>
+                            <div class="info_content">
+                                <div class="title">
+                                    <h3>{{item.name}}</h3>
+                                    <!-- <ul>
+                                        <li>高级</li>
+                                        <li>管理</li>
+                                        <li>集团</li>
+                                        <li>可选</li>
+                                    </ul> -->
+                                </div>
+                                <div class="author">
+                                    <!-- <span class="portrait"><img src="../../images/portrait01.png"></span> -->
+                                    <span>{{item.presenter}}</span>
+                                </div>
+                                <p>{{item.description}}</p>
+                                <div class="state">
+                                    <span><img src="../../images/icon01.png">123</span>
+                                    <span><img src="../../images/kcIcon.png">{{item.structure_name}}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {{/each}}
+                    {{else}}
+                    <li style="text-align:center;background:#fff;width:100%;padding:150px 0px;">没有数据</li>
+                    {{/if}}
+                </script>
+                <div style="text-align: center" id='biuuu_text_number_2'></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_cont">
+            <p>Copyright 2013-2016 上海华谊(集团)公司</p>
+        </div>
+    </div>
+</div>
+<script data-main="../../js/app.js" src="../../js/lib/require.js"></script>
+</body>
+</html>

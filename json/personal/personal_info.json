@@ -1,0 +1,10 @@
+{
+  "code": 0,
+  "msg": "operation successful",
+  "id": 0,
+  "data": {
+    "employee_name": "朱坚",
+    "location_name": "上海华谊集团技术研究院",
+    "job_name": "高端大气啊上档次的web前端"
+  }
+}

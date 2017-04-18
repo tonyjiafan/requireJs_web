@@ -1,0 +1,10 @@
+{
+  "code": 0,
+  "msg": "operation successful",
+  "id": 0,
+  "data": {
+    "session_id": "dd8fcd2c91dc514ab48151f0611c24b1a4573ab2",
+    "uid": 1,
+    "employee_id": 3
+  }
+}
