@@ -1,6 +1,4 @@
-####url设置
-/js/base.js 287行 修改location.href="xxxxxx?sid="中的xxxxxx
+####温习requireJs
 
-####
-
-！！！安装 php_curl模块 ： apt-get install curl libcurl3 libcurl3-dev php5-curl
+这是一个算比较完整的web应用，开发流程，代码结构的组织都是有设计有思想的。
+作为村纯前端实现的一个web网站。
